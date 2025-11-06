@@ -1,60 +1,51 @@
-/* --- IMPORTACIÓN DE FUENTES --- */
-/*
-  Poppins: para títulos y botones (más presencia)
-  Roboto: para texto de cuerpo (más legible)
-*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap");
 
-/* --- VARIABLES DE COLOR (Opcional, pero buena práctica) --- */
 :root {
-  --color-primario: #0b2545; /* Azul oscuro solicitado */
-  --color-primario-hover: #1a4a8a; /* Un tono más claro para hover */
-  --color-fondo: #f8f9fa; /* Fondo gris muy claro */
+  --color-primario: #0b2545;
+  --color-primario-hover: #1a4a8a;
+  --color-fondo: #f8f9fa;
   --color-blanco: #ffffff;
   --color-texto: #333333;
   --color-subtexto: #555555;
   --color-footer: #999999;
 }
 
-/* --- RESETEO Y ESTILOS GLOBALES --- */
 *,
 *::before,
 *::after {
-  box-sizing: border-box; /* Asegura que padding/border no afecten el tamaño total */
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
-  font-size: 16px; /* Base para tamaños rem */
+  font-size: 16px;
 }
 
 body {
-  font-family: "Roboto", sans-serif; /* Fuente por defecto */
+  font-family: "Roboto", sans-serif;
   background-color: var(--color-fondo);
   color: var(--color-texto);
-
-  /* Centrado de contenido con Flexbox */
+  height: 100%;
+  overflow-y: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Asegura que ocupe toda la altura */
-  padding: 20px; /* Espacio en los bordes en móviles */
+  min-height: 100vh;
+  padding: 20px;
 }
 
-/* --- CONTENEDOR PRINCIPAL --- */
 .perfil-container {
   width: 100%;
-  max-width: 680px; /* Ancho máximo en escritorio */
-  margin: 20px auto;
-  padding: 40px;
+  max-width: 680px;
+  /* margin: 20px auto; */
+  padding: 20px;
   background-color: var(--color-blanco);
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-  text-align: center; /* Centra todo el contenido interno */
+  text-align: center;
 }
 
-/* --- ENCABEZADO (Foto, Nombre, Título) --- */
 header {
   margin-bottom: 30px;
 }
@@ -62,8 +53,8 @@ header {
 .perfil-imagen {
   width: 140px;
   height: 140px;
-  border-radius: 50%; /* Círculo perfecto */
-  object-fit: cover; /* Evita que la imagen se distorsione */
+  border-radius: 50%;
+  object-fit: cover;
   border: 5px solid var(--color-primario);
   margin-bottom: 20px;
   box-shadow: 0 4px 15px rgba(11, 37, 69, 0.2);
@@ -72,7 +63,7 @@ header {
 h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 2.25rem; /* 36px */
+  font-size: 2.25rem;
   color: var(--color-primario);
   margin-bottom: 5px;
 }
@@ -80,7 +71,7 @@ h1 {
 h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1.1rem; /* 17.6px */
+  font-size: 1.1rem;
   color: var(--color-subtexto);
   margin-bottom: 15px;
 }
@@ -91,30 +82,26 @@ h2 {
   color: var(--color-subtexto);
 }
 
-/* --- SECCIÓN DE ENLACES (Botones) --- */
 .seccion-enlaces ul {
-  list-style: none; /* Quita los puntos de la lista */
+  list-style: none;
 }
 
 .seccion-enlaces li {
-  margin-bottom: 16px; /* Espacio entre botones */
+  margin-bottom: 16px;
 }
 
 .enlace-boton {
-  /* Diseño de botón */
   display: block;
   background-color: var(--color-primario);
   color: var(--color-blanco);
-  padding: 14px 24px; /* Padding solicitado */
-  border-radius: 8px; /* Bordes redondeados */
-  text-decoration: none; /* Quita el subrayado */
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
 
-  /* Tipografía */
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1rem;
 
-  /* Transición suave */
   transition: all 0.3s ease;
 
   box-shadow: 0 4px 12px rgba(11, 37, 69, 0.15);
@@ -122,50 +109,46 @@ h2 {
 
 .enlace-boton:hover {
   background-color: var(--color-primario-hover);
-  transform: translateY(-3px); /* Efecto de "levantarse" */
+  transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(11, 37, 69, 0.2);
 }
 
-/* --- SECCIÓN REDES SOCIALES (Íconos) --- */
-.redes-sociales ul {
+/* .redes-sociales ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 30px; /* Espacio entre íconos */
+  gap: 30px;
   margin-top: 30px;
 }
 
 .redes-sociales a {
   color: var(--color-primario);
-  font-size: 1.75rem; /* Tamaño de íconos */
+  font-size: 1.75rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .redes-sociales a:hover {
   color: var(--color-primario-hover);
-  transform: scale(1.15); /* Aumenta tamaño al pasar el mouse */
-}
+  transform: scale(1.15);
+} */
 
-/* --- PIE DE PÁGINA --- */
 footer {
   margin-top: 40px;
 }
 
 footer p {
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
   color: var(--color-footer);
 }
 
-/* --- DISEÑO RESPONSIVE (Móviles) --- */
-/* Estilos para pantallas de menos de 768px (móviles y tablets pequeñas) */
 @media (max-width: 767px) {
   body {
-    padding: 15px; /* Menos espacio en bordes de móvil */
+    padding: 15px;
   }
 
   .perfil-container {
-    padding: 25px; /* Menos padding interno en la tarjeta */
+    padding: 25px;
   }
 
   .perfil-imagen {
@@ -174,7 +157,7 @@ footer p {
   }
 
   h1 {
-    font-size: 1.8rem; /* 28.8px */
+    font-size: 1.8rem;
   }
 
   h2 {
@@ -187,7 +170,7 @@ footer p {
   }
 
   .redes-sociales a {
-    font-size: 1.5rem; /* Íconos un poco más pequeños */
+    font-size: 1.5rem;
   }
 
   footer p {
